@@ -1,0 +1,38 @@
+<div class="container">
+
+    <table class="table">
+        <thead *ngIf="listaAgregados2.length != 0">
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Título</th>
+            <th scope="col">Cantidad</th>
+            <th scope="col">Precio unitario</th>
+            <th scope="col">Precio</th>
+            <th scope="col">Eliminar</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let x of listaAgregados2">
+            <td>{{x.id}}</td>
+            <td>{{x.titulo}}</td>
+            <td>{{x.cantidad}}</td>
+            <td>{{x.precio | currency: 'USD'}}</td>
+            <td>{{x.precioCantidad | currency: 'USD'}}</td>
+            <td><button (click)="enviarIdEliminar(x.id)" class="btn btn-danger">Eliminar</button></td>
+          </tr>
+        </tbody>
+        <thead>
+          <tr>
+            <th scope="col">Cantidad total:</th>
+            <th>{{this.sumaCantidad2}}</th>
+          </tr>
+          <tr>
+            <th scope="col">Precio total:</th>
+            <th>{{this.sumaPrecio2 | currency: 'USD'}}</th>
+          </tr>
+        </thead>
+      </table>
+</div>
+
+<!--  <p>prueba</p>
+ <p *ngFor="let x of listaAgregados2">{{x.id}}</p> -->

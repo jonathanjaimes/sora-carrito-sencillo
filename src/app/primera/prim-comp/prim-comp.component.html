@@ -1,0 +1,18 @@
+<div class="contTitulo">
+    <div class="container">
+        <h1>Productos</h1>
+    
+    </div>
+
+</div>
+
+<app-tabla [listaAgregados2] ="listaAgregados"
+(idEliminarHijo) = "recibirIdEliminar($event)"
+[sumaCantidad2]="sumaCantidad"
+[sumaPrecio2]="sumaPrecio"></app-tabla>
+<app-tarjeta *ngFor="let dato of listadoNuevo" 
+[lista] = "dato" 
+(datosDelHijo)="recibirDatos($event)" 
+(cantidadDelHijo) = "recibirCantidadHijo($event)"
+></app-tarjeta>
+

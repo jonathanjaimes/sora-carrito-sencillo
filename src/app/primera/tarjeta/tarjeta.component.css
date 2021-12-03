@@ -1,0 +1,48 @@
+
+.contenedor {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.info {
+    /* background-color:green; */
+    width: 400px;
+}
+
+.info p {
+    margin: 0;
+    margin-left: 30px;
+}
+
+.cantidad {
+    /* background-color: red; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 200px;
+
+}
+
+.cantidad p {
+    text-align: center; 
+}
+
+.cantidad input {
+    width: 70px;
+}
+
+.cantidad form {
+    width: 70px;
+}
+
+.cantidad button {
+    margin-top: 20px;
+    margin-left: -8px;
+}
+
+.contenedorImgInfo {
+    /* background-color:blue; */
+    display: flex;
+    align-items: center;
+}

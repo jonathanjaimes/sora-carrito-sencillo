@@ -1,0 +1,33 @@
+<div class="container mt-3">
+    <div class="card">
+        <div class="card-body padre">
+            <div class="contenedor">
+                <div class="contenedorImgInfo">
+                    <img src="https://picsum.photos/200" alt="Imagen">
+                    <div class="info">
+                        <p>Código: {{lista.id}}</p>
+                        <p>Núcleos: {{lista.userId}}</p>
+                        <p>Título: {{lista.title}}</p>
+                    </div>
+
+                </div>
+                <div class="cantidadContainer">
+                    <div class="cantidad"> 
+                        <p>Cantidad:</p>
+                        <form #datosFormulario = "ngForm" (ngSubmit)="enviarForm()">
+                            <input type="number" name="cantidad" [(ngModel)]="value">
+                            <button type="submit" class="btn btn-primary">Agregar</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!--   <button (click)="enviarDatos()">Agregar</button>
+ --> 
